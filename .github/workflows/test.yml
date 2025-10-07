@@ -9,6 +9,7 @@ on:
       - 'mix.lock'
   schedule:
     - cron: '0 12 * * *'
+  pull_request:
 
 env:
   SRH_TOKEN: example_token
