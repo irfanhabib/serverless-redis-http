@@ -27,7 +27,7 @@ jobs:
         run: docker save hiett/serverless-redis-http:latest -o /tmp/serverless-redis-http.tar
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: serverless-redis-http
           path: /tmp/serverless-redis-http.tar
@@ -50,7 +50,7 @@ jobs:
           bun-version: latest
 
       - name: Download SRH artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: serverless-redis-http
           path: /tmp
