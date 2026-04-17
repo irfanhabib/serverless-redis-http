@@ -32,3 +32,7 @@ srh-*.tar
 srh-config/
 
 test-project/
+
+# Node.js dependencies for test scripts
+test/node_modules/
+test/package-lock.json

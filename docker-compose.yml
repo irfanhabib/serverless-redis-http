@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  srh:
+    build: .
+    ports:
+      - '8079:80'
+    environment:
+      - SRH_MODE=env
+      - SRH_TOKEN=local_token
+      - SRH_CONNECTION_STRING=${REDIS_URL}
+      - SRH_MAX_CONNECTIONS=10
+    restart: unless-stopped
